@@ -415,7 +415,7 @@ export default function App() {
         </div>
         {/* Impact numbers */}
         <div style={{ marginTop: 56, display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 1, borderRadius: 16, overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)" }}>
-          {[["5–10x", "higher conversion", "No KYC, no card declines, no ACH delays. Users pay from their bank."], ["$0", "custodial risk", "On-chain escrow, not your accounts. Bank-to-bank fiat. Outside MSB."], ["~50%", "cheaper", "3% flat vs 3–5% + hidden spreads from card-based providers."], ["< 1 hr", "to integrate", "A few API calls and one WebView. No licenses. No compliance infra."]].map(([big, label, desc], i) => (
+          {[["5–10x", "higher conversion", "No KYC, no card declines, no ACH delays. Users pay from their bank."], ["Zero", "custodial risk", "On-chain escrow, not your accounts. Bank-to-bank fiat. Outside MSB."], ["~50%", "cheaper", "3% flat vs 3–5% + hidden spreads from card-based providers."], ["< 1 hr", "to integrate", "A few API calls and one WebView. No licenses. No compliance infra."]].map(([big, label, desc], i) => (
             <div key={label} style={{ padding: "36px 24px", background: "rgba(255,255,255,0.015)", borderLeft: i > 0 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
               <div style={{ color: "#fff", fontSize: 36, fontWeight: 800, fontFamily: "var(--mono)", letterSpacing: "-2px", marginBottom: 4 }}>{big}</div>
               <div style={{ color: "#888", fontSize: 13, fontWeight: 600, marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.5px" }}>{label}</div>
