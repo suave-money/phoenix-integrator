@@ -285,7 +285,7 @@ export default function App() {
 
       {/* HERO */}
       <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "100px 24px 80px" }}>
-        <div style={{ maxWidth: 760 }}>
+        <div style={{ maxWidth: 940, width: "100%" }}>
           <img
             src="/512x512%20WHITE%20ON%20BLACK.jpg"
             alt="Phoenix logo"
@@ -298,13 +298,31 @@ export default function App() {
             <a href="https://tinyurl.com/pmofframp" target="_blank" rel="noopener noreferrer" style={{ background: "#fff", color: "#000", borderRadius: 8, padding: "12px 24px", fontSize: 14, fontWeight: 600, textDecoration: "none" }}>View docs</a>
             <a href="mailto:sidd@phoenix.market" style={{ background: "transparent", color: "#fff", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 8, padding: "12px 24px", fontSize: 14, fontWeight: 500, textDecoration: "none" }}>Get in touch</a>
           </div>
-          <div style={{ display: "flex", gap: 1, borderRadius: 12, overflow: "hidden", border: "1px solid rgba(255,255,255,0.06)" }}>
-            {[["< 3 min", "Settlement"], ["3%", "Flat buyer fee"], ["24 / 7", "Always on"], ["$1", "Min"], ["$3500", "Max"], ["Zero", "KYC documents"]].map(([v, l], i) => (
-              <div key={l} style={{ flex: 1, padding: "20px 10px", textAlign: "center", borderRight: i < 5 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
-                <div style={{ color: "#fff", fontSize: 17, fontWeight: 700, fontFamily: "var(--mono)", letterSpacing: "-0.5px" }}>{v}</div>
-                <div style={{ color: "#555", fontSize: 10, marginTop: 4 }}>{l}</div>
-              </div>
-            ))}
+          <div style={{ display: "flex", flexDirection: "column", borderRadius: 16, overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)" }}>
+            <div style={{ display: "flex" }}>
+              {[["< 3 min", "Settlement"], ["3%", "Flat buyer fee"], ["24 / 7", "Always on"], ["$1", "Min"], ["$3500", "Max"], ["Zero", "KYC documents"]].map(([v, l], i) => (
+                <div key={l} style={{ flex: 1, padding: "24px 12px", textAlign: "center", borderRight: i < 5 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
+                  <div style={{ color: "#fff", fontSize: 22, fontWeight: 700, fontFamily: "var(--mono)", letterSpacing: "-0.5px" }}>{v}</div>
+                  <div style={{ color: "#555", fontSize: 12, marginTop: 6 }}>{l}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{ position: "relative", display: "flex", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+              <div style={{ position: "absolute", top: -10, left: 20, background: "#222", padding: "2px 10px", borderRadius: 4, color: "#666", fontSize: 10, fontWeight: 600, letterSpacing: "1.5px", fontFamily: "var(--mono)", textTransform: "uppercase" }}>Industry standard</div>
+              {[
+                ["2 days", "1000×", "faster"],
+                ["6%", "50%", "the price"],
+                ["M–F only", "3×", "more available"],
+                ["$5 min", "5×", "less"],
+                ["$2k / mo max", "10×", "more"],
+                ["KYC required", "10×", "faster"]
+              ].map(([val, mult, label], i) => (
+                <div key={i} style={{ flex: 1, padding: "22px 12px 18px", textAlign: "center", borderRight: i < 5 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
+                  <div style={{ color: "#555", fontSize: 12, fontFamily: "var(--mono)", lineHeight: 1.3, marginBottom: 8 }}>{val}</div>
+                  <div><span style={{ color: "#fff", fontSize: 18, fontWeight: 800, fontFamily: "var(--mono)" }}>{mult}</span> <span style={{ color: "#666", fontSize: 12 }}>{label}</span></div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
