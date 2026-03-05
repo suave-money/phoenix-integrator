@@ -433,6 +433,14 @@ export default function App() {
         <EconomicsCalc />
       </div></FadeIn>
 
+      {/* POOL SIM (simplified) - LIQUIDITY */}
+      <FadeIn id="simulator"><div style={{ maxWidth: 940, margin: "0 auto", padding: "100px 24px" }}>
+        <div style={{ color: "#555", fontSize: 11, fontWeight: 600, letterSpacing: "2px", marginBottom: 12, fontFamily: "var(--mono)" }}>LIQUIDITY</div>
+        <h2 style={{ fontSize: "clamp(28px,4vw,44px)", fontWeight: 800, letterSpacing: "-2px", marginBottom: 14 }}>How fast does liquidity clear?</h2>
+        <p style={{ color: "#888", fontSize: 15, marginBottom: 40, maxWidth: 600, lineHeight: 1.7 }}>Matching is proportional — larger pools capture more buy volume. Adjust the sliders to model clearing times.</p>
+        <div style={{ border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: "36px 28px" }}><PoolSimulator /></div>
+      </div></FadeIn>
+
       {/* YIELD CALCULATOR */}
       <FadeIn id="yield"><div style={{ maxWidth: 940, margin: "0 auto", padding: "100px 24px" }}>
         <div style={{ color: "#555", fontSize: 11, fontWeight: 600, letterSpacing: "2px", marginBottom: 12, fontFamily: "var(--mono)" }}>SELLER YIELD</div>
@@ -445,7 +453,16 @@ export default function App() {
       <FadeIn id="security"><div style={{ maxWidth: 940, margin: "0 auto", padding: "100px 24px" }}>
         <div style={{ color: "#555", fontSize: 11, fontWeight: 600, letterSpacing: "2px", marginBottom: 12, fontFamily: "var(--mono)" }}>SECURITY & TRUST</div>
         <h2 style={{ fontSize: "clamp(28px,4vw,44px)", fontWeight: 800, letterSpacing: "-2px", marginBottom: 14, lineHeight: 1.1 }}>Built on bank-grade verification</h2>
-        <p style={{ color: "#888", fontSize: 15, marginBottom: 48, maxWidth: 600, lineHeight: 1.7 }}>Phoenix leverages the compliance infrastructure banks already built.</p>
+        <p style={{ color: "#888", fontSize: 15, marginBottom: 28, maxWidth: 600, lineHeight: 1.7 }}>Phoenix leverages the compliance infrastructure banks already built.</p>
+        <div style={{ display: "flex", alignItems: "center", gap: 28, flexWrap: "wrap", marginBottom: 44 }}>
+          {[
+            { name: "Bank of America", src: "./assets/banks/bofa-logo.png" },
+            { name: "Chase", src: "./assets/banks/chase-logo.png" },
+            { name: "Wells Fargo", src: "./assets/banks/wells-fargo-logo.png" },
+          ].map(({ name, src }) => (
+            <img key={name} src={src} alt={name} title={name} style={{ height: 28, width: "auto", maxWidth: 120, objectFit: "contain", opacity: 0.9 }} />
+          ))}
+        </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, borderRadius: 16, overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)" }}>
           {[["Bank-verified identity", "Users log into their bank in a sandboxed WebView. Bank KYC + 2FA provides verification. No documents collected."], ["Credentials stay on device", "WebView runs locally. Phoenix navigates but never sees credentials. User types into their bank's real login."], ["Non-custodial escrow", "USDC in smart contracts on Base. Funds move only through verified fiat payment. Code-enforced rules."], ["Irrevocable Zelle", "Unlike cards, Zelle can't be charged back. Once confirmed, money is in the seller's account."]].map(([t, d], i) => (
             <div key={t} style={{ padding: "36px 28px", background: "rgba(255,255,255,0.015)", borderTop: i >= 2 ? "1px solid rgba(255,255,255,0.06)" : "none", borderLeft: i % 2 === 1 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
@@ -453,14 +470,6 @@ export default function App() {
             </div>
           ))}
         </div>
-      </div></FadeIn>
-
-      {/* POOL SIM (simplified) */}
-      <FadeIn id="simulator"><div style={{ maxWidth: 940, margin: "0 auto", padding: "100px 24px" }}>
-        <div style={{ color: "#555", fontSize: 11, fontWeight: 600, letterSpacing: "2px", marginBottom: 12, fontFamily: "var(--mono)" }}>LIQUIDITY</div>
-        <h2 style={{ fontSize: "clamp(28px,4vw,44px)", fontWeight: 800, letterSpacing: "-2px", marginBottom: 14 }}>How fast does liquidity clear?</h2>
-        <p style={{ color: "#888", fontSize: 15, marginBottom: 40, maxWidth: 600, lineHeight: 1.7 }}>Matching is proportional — larger pools capture more buy volume. Adjust the sliders to model clearing times.</p>
-        <div style={{ border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: "36px 28px" }}><PoolSimulator /></div>
       </div></FadeIn>
 
       {/* ROADMAP */}
