@@ -1,0 +1,5 @@
+{"sessionId":"9b4013","runId":"run-1","hypothesisId":"H2","location":"main.jsx:21","message":"Root element lookup","data":{"rootFound":true},"timestamp":1772703957000}
+{"sessionId":"9b4013","runId":"run-1","hypothesisId":"H1","location":"main.jsx:5","message":"Main module evaluated","data":{"href":"http://localhost:8002/","readyState":"interactive"},"timestamp":1772703957000}
+{"sessionId":"9b4013","runId":"run-1","hypothesisId":"H3","location":"main.jsx:77","message":"createRoot render invoked","data":{"strictMode":true},"timestamp":1772703957002}
+{"sessionId":"9b4013","runId":"run-1","hypothesisId":"H5","location":"phoenix-integrator-v3_1.jsx:282","message":"App mounted","data":{"pathname":"/"},"timestamp":1772703957087}
+{"sessionId":"9b4013","runId":"run-1","hypothesisId":"H5","location":"phoenix-integrator-v3_1.jsx:282","message":"App mounted","data":{"pathname":"/"},"timestamp":1772703957088}

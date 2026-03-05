@@ -1,0 +1,20 @@
+{
+  "name": "phoenix-integrator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "esbuild main.jsx --bundle --outfile=dist/main.js --format=esm --servedir=. --serve=8002",
+    "build": "esbuild main.jsx --bundle --outfile=dist/main.js --format=esm",
+    "dev": "npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "esbuild": "^0.27.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}
